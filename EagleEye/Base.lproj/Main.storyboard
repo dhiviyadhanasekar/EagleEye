@@ -41,14 +41,14 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your sharp eyes caught the prey at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-o1-g5z">
-                                <frame key="frameInset" minX="56" minY="103" width="285" height="21"/>
+                                <frame key="frameInset" minX="252" minY="28" width="285" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZc-xA-A9B">
-                                <frame key="frameInset" minX="399" minY="103" width="29" height="21"/>
+                                <frame key="frameInset" minX="595" minY="28" width="29" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -73,7 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Over"/>
                                 <connections>
-                                    <action selector="showAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9c-bh-9gG"/>
+                                    <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="mgC-rR-cJU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qco-jB-u6e">
@@ -108,17 +108,74 @@
                                 <frame key="frameInset" minX="580" minY="325" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="QYH-m0-rpM" kind="presentation" modalTransitionStyle="flipHorizontal" id="H3J-FO-AOq"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Águila_calva" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-6d-As1">
+                                <frame key="frameInset" minX="56" minY="3" width="174" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="roundLabel" destination="pwv-72-CGz" id="3y5-J3-28S"/>
+                        <outlet property="scoreLabel" destination="HC0-2t-7p8" id="Eiz-x8-1cx"/>
                         <outlet property="slider" destination="9kh-7p-31q" id="eN3-5T-Z3Y"/>
+                        <outlet property="targetLabel" destination="pZc-xA-A9B" id="0dm-7W-sJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79.610194902548727" y="136.80000000000001"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="mNI-Bd-ddM">
+            <objects>
+                <viewController id="QYH-m0-rpM" customClass="AboutViewController" customModule="EagleEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UOw-q1-6Nw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ygM-3M-9Ix"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBw-Gb-vFz" customClass="About">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-Kb-7Wz">
+                                <frame key="frameInset" minX="196" width="462" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">*** Eagle's Eye ***
+
+Welcome to the game of the Eagle's Eye where you can catch your prey and earn points by dragging a  slider to the exact position where the prey is.
+
+Your goal is to hit the target by catching the prey.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-P5-RpS">
+                                <frame key="frameInset" minX="329" minY="325" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close" destination="QYH-m0-rpM" eventType="touchUpInside" id="t9G-Cv-zsD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Águila_calva" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-dS-q5p">
+                                <frame key="frameInset" minX="14" minY="8" width="174" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKJ-7o-lRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572.56371814092961" y="136.80000000000001"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Águila_calva" width="1911" height="1356"/>
+    </resources>
 </document>
