@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E128F8461E027E400027527B /* ppt-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E128F8451E027E400027527B /* ppt-icon.jpg */; };
 		E12963571DC50FD200971218 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12963561DC50FD200971218 /* AppDelegate.swift */; };
 		E12963591DC50FD200971218 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12963581DC50FD200971218 /* ViewController.swift */; };
 		E129635C1DC50FD200971218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E129635A1DC50FD200971218 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E128F8451E027E400027527B /* ppt-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ppt-icon.jpg"; path = "Assets.xcassets/ppt-icon.jpg"; sourceTree = "<group>"; };
 		E12963531DC50FD200971218 /* EagleEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12963561DC50FD200971218 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E12963581DC50FD200971218 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				E12963581DC50FD200971218 /* ViewController.swift */,
 				E129635A1DC50FD200971218 /* Main.storyboard */,
 				E129635D1DC50FD200971218 /* Assets.xcassets */,
+				E128F8451E027E400027527B /* ppt-icon.jpg */,
 				E129635F1DC50FD200971218 /* LaunchScreen.storyboard */,
 				E12963621DC50FD200971218 /* Info.plist */,
 				E12963841DC52A3A00971218 /* AboutViewController.swift */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E12963611DC50FD200971218 /* LaunchScreen.storyboard in Resources */,
+				E128F8461E027E400027527B /* ppt-icon.jpg in Resources */,
 				E129635E1DC50FD200971218 /* Assets.xcassets in Resources */,
 				E129635C1DC50FD200971218 /* Main.storyboard in Resources */,
 			);
@@ -509,6 +513,7 @@
 				E129637D1DC50FD200971218 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E129637E1DC50FD200971218 /* Build configuration list for PBXNativeTarget "EagleEyeTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				E12963801DC50FD200971218 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E12963811DC50FD200971218 /* Build configuration list for PBXNativeTarget "EagleEyeUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				E12963831DC50FD200971218 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

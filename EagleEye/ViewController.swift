@@ -60,6 +60,7 @@ class ViewController: UIViewController {
     @IBAction func startOver(){
         startNewGame()
     }
+    
 
     @IBAction func showAction(){
         
